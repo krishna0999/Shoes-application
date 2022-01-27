@@ -1,0 +1,131 @@
+.container1 {
+  margin: 1.7vw 0 1.5vw 0;
+}
+
+.container1__tophead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5vw;
+}
+
+.container1__tophead > h1 {
+  margin: 0 0 0 3.8vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 2vw, 2.2rem);
+}
+
+/*Style the dropdown menu*/
+.container1__tophead > select {
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: clamp(1rem, 1.1vw, 11.2rem);
+  margin-right: 4vw;
+  outline-width: 0;
+  cursor: pointer;
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto auto;
+}
+
+/* Style a single product's layout*/
+.products__single {
+  width: 20vw;
+  height: 26vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5vw 1.5vw;
+  border-radius: 10px;
+  border: 2px solid rgb(236, 236, 236);
+  margin-bottom: 1vw;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.products__single:hover {
+  box-shadow: 3px 3px 30px rgb(180, 180, 180);
+}
+
+.products__singleHeading,
+.products__singleMiddle {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5vw;
+}
+
+.products__singleHeading > h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  color: rgb(206, 200, 200);
+}
+
+.products__singleHeading > h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+
+.products__singleMiddle > img {
+  width: 100%;
+}
+
+.products__singleBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products__singleBottomPrice {
+  display: flex;
+  flex-direction: column;
+}
+
+.products__singleBottomPrice > h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  color: rgb(206, 200, 200);
+}
+
+.products__singleBottomPrice > h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+
+.products__singelBottomImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products__singelBottomImages > img {
+  width: 3vw;
+  height: 3vw;
+  object-fit: contain;
+  border: 2px solid rgb(236, 236, 236);
+  border-radius: 10px;
+  padding: 0.2vw;
+}
+
+@media (max-width: 992px) {
+  .products {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .products__single {
+    width: 15rem;
+    height: 20rem;
+  }
+}

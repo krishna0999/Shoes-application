@@ -1,0 +1,207 @@
+.sidebar {
+  margin-top: 2vw;
+}
+
+.sidebar__categories {
+  position: relative;
+  border-top: 1px solid rgb(236, 248, 255);
+  border-bottom: 1px solid rgb(236, 248, 255);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: rgb(255, 255, 255);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  /* margin-bottom: 0.8vw; */
+  transition: 0.4s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.1vw, 1.4rem);
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.categories__options {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+/* Place the arrow icon correctly */
+.sidebar__categories .MuiSvgIcon-root {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+}
+
+/*Changing the style of icon when clicked*/
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1vw, 1.1rem);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.3vw;
+  width: 1.3vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  border: 1px solid rgb(231, 231, 231);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: rgb(248, 248, 248);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  border: 4px solid rgb(95, 93, 93);
+  border-radius: 4px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* The price section starts here --->*/
+.sidebar__price,
+.sidebar__size {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid rgb(236, 248, 255);
+  border-bottom: 1px solid rgb(236, 248, 255);
+  padding: 1vw;
+}
+
+.sidebar__price > h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.1vw, 1.4rem);
+}
+
+.sidebar__size > h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.1vw, 1.4rem);
+}
+
+/*Style the sizes for shoes*/
+.sidebar__sizeBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1vw;
+  width: 90%;
+}
+
+.sidebar__sizeBoxes > p {
+  border: 2px solid rgb(237, 241, 241);
+  border-radius: 8px;
+  margin-right: 1vw;
+  margin-bottom: 1vw;
+  margin-left: 2px;
+  padding: 0.4vw 0.6vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.6rem, 1vw, 1.2rem);
+  cursor: pointer;
+  background-color: rgb(252, 253, 253);
+}
+
+/*Styling the 2 handle range slider*/
+
+.slider {
+  position: relative;
+  margin: 1.5vw 0;
+}
+
+.slider #slider-1,
+.slider #slider-2 {
+  width: 100%;
+  margin-top: 1vw;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(31, 31, 31);
+  height: 0.4vw;
+  width: 100%;
+  border-radius: 20px;
+  pointer-events: all;
+}
+
+.slider #slider-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider #slider-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.slider #slider-1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: black;
+  width: 1.5vw;
+  height: 1.5vw;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider #slider-2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: black;
+  width: 1.5vw;
+  height: 1.5vw;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
